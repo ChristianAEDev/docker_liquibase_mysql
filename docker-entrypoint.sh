@@ -33,7 +33,7 @@ fi
 
 exec liquibase --driver=com.mysql.jdbc.Driver \
      --changeLogFile=/changelogs/migrations.xml \
-     --url="jdbc:mysql://$CLIENT_HOST:$CLIENT_PORT/$TARGET_DATABASE" \
+     --url="jdbc:mysql://$CLIENT_HOST:$CLIENT_PORT/$TARGET_DATABASE?createDatabaseIfNotExist=true" \
      --username="${CLIENT_USER}" \
      "$CLIENT_PASS" \
      "$@" \
