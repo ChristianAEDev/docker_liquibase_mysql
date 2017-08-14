@@ -2,6 +2,8 @@
 
 if [ ! -z "$WORKING_DIR" ]; then
     cd $WORKING_DIR
+else
+    WORKING_DIR="/changelogs"
 fi
 
 if [ "$1" = 'prompt' ]; then
@@ -32,7 +34,7 @@ if [ -z "${TARGET_DATABASE}" ]; then
 fi
 
 exec liquibase --driver=com.mysql.jdbc.Driver \
-     --changeLogFile=/changelogs/migrations.xml \
+     --changeLogFile=${WORKING_DIR}/migrations.xml \
      --url="jdbc:mysql://$CLIENT_HOST:$CLIENT_PORT/$TARGET_DATABASE?createDatabaseIfNotExist=true" \
      --username="${CLIENT_USER}" \
      "$CLIENT_PASS" \
