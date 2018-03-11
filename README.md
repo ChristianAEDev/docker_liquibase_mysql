@@ -1,4 +1,7 @@
-# Liquibase 2.0.5
+Fork of https://github.com/freshbooks/docker_liquibase_mysql updating the used software.
+This included Liquibase, JDK, Centos & MySQL Connector.
+
+# Liquibase 3.5.5
 
 [![Docker Repository on Quay.io](https://quay.io/repository/freshbooks/liquibase-mysql/status "Docker Repository on Quay.io")](https://quay.io/repository/freshbooks/liquibase-mysql)
 [![License][license]][license-url]
@@ -8,7 +11,7 @@
 
 ## Default Configuration
 
-Runs liquibase 2.0.5 with mysql connector
+Runs liquibase 3.5.5 with mysql connector
 
 ## Usage
 
@@ -27,7 +30,7 @@ docker run -it \
   --rm \
   -v /local/path/migrations:/changelogs \
   -e TARGET_DATABASE=foo \
-  freshbooks/liquibase-mysql:2.0.5
+  christianaedev/liquibase-mysql
 ```
 
 
@@ -51,12 +54,10 @@ You may also invoke liquibase with whatever options or command you like.
 docker run -it \
   --rm \
   -v /local/path/migrations:/changelogs \
-  freshbooks/liquibase_mysql:2.0.5 \
+  christianaedev/liquibase_mysql \
    --changeLogFile=/changelogs/migrations.xml \
    --username=foo
    --password=bar
    --url="jbc:mysql://baz:3306/my_table
    update
 ```
-
-
