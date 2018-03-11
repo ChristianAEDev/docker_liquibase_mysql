@@ -1,6 +1,3 @@
-Fork of https://github.com/freshbooks/docker_liquibase_mysql updating the used software.
-This included Liquibase, JDK, Centos & MySQL Connector.
-
 # Liquibase 3.5.5
 
 [![Docker Repository on Quay.io](https://quay.io/repository/freshbooks/liquibase-mysql/status "Docker Repository on Quay.io")](https://quay.io/repository/freshbooks/liquibase-mysql)
